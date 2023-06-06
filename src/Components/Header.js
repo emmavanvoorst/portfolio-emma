@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+
 const NavContainer = styled.div`
   position: fixed;
   background-color: #4442ad;
@@ -45,7 +46,7 @@ const Header = () => (
       <NavTitle>EMMA VAN VOORST</NavTitle>
       <NavItemContainer>
         {/* <NavItems>ABOUT</NavItems> */}
-       <Link to={#Portfolio}><NavItems>PORTFOLIO</NavItems></Link> 
+      <NavItems>PORTFOLIO</NavItems>
         <NavItems>CONTACT</NavItems>
       </NavItemContainer>
     </NavContent>
