@@ -9,17 +9,17 @@ import { useRef } from "react";
 
 
 function App() {
-  const home = useRef(null);
+  const hero = useRef(null);
   const portfolio = useRef(null);
   const contact = useRef(null);
 
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Header home={home} portF={portfolio} contact={contact}/>
-      <Hero ref={home}/>
-      <Portfolio ref={portfolio}/>
-      <Contact ref={contact}/>
+      <Header hero={hero} portF={portfolio} contact={contact}/>
+      <Hero innerRef={hero} portF={portfolio}/>
+      <Portfolio innerRef={portfolio}/>
+      <Contact innerRef={contact}/>
       {/* <Routes>
         <Route path="/" element={<h1>hello</h1>} />
         <Route path="/hero" element={<Hero/>} />

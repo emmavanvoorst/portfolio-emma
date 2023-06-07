@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { scrollToSection } from './Helpers'
 
 const ContentContainer = styled.div`
   background: white;
@@ -31,6 +31,7 @@ const FlexBox = styled.div`
 
 const Button = styled.button`
   all: unset;
+  cursor: pointer;
   background-color: #4442ad;
   color: white;
   font-size: 20px;
@@ -43,8 +44,8 @@ const Button = styled.button`
 `;
 
 
-const Hero = () => (
-  <HeroContainer>
+const Hero = (props) => (
+  <HeroContainer ref={props.innerRef}>
     <ContentContainer>
       <div>
         <Text>
@@ -53,7 +54,7 @@ const Hero = () => (
           Canada.
         </Text>
         <FlexBox>
-            <Button>SEE MY PORTFOLIO</Button>
+            <Button onClick={()=> scrollToSection(props.portF)}>SEE MY PORTFOLIO</Button>
         </FlexBox>
         
       </div>

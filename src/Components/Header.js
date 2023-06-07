@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { useRef } from "react";
-import Portfolio from "./Portfolio";
-import Contact from "./Contact";
+import { scrollToSection } from './Helpers'
 
 
 const NavContainer = styled.div`
@@ -22,11 +19,13 @@ const NavContainer = styled.div`
 
 const NavTitle = styled.p`
   display: inline;
+  cursor: pointer;
 `;
 
 const NavItems = styled.p`
   display: inline;
   padding: 2em;
+  cursor: pointer;
 `;
 
 const NavContent = styled.div`
@@ -42,22 +41,16 @@ const NavItemContainer = styled.div`
   justify-content: space-between;
   width: 360px;
 `;
- const scrollToSection = (elementRef) =>{
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: 'smooth'
-    })
-    console.log({elementRef})
-  }
+
 
 const Header = (props) => (
  
   <NavContainer>
     <NavContent>
-      <NavTitle>EMMA VAN VOORST</NavTitle>
+      <NavTitle onClick= {()=> scrollToSection(props.hero)}>EMMA VAN VOORST</NavTitle>
       <NavItemContainer>
         {/* <NavItems>ABOUT</NavItems> */}
-      <NavItems onClick= {()=> scrollToSection(props.home)}>PORTFOLIO</NavItems>
+      <NavItems onClick= {()=> scrollToSection(props.portF)}>PORTFOLIO</NavItems>
         <NavItems onClick= {()=> scrollToSection(props.contact)}>CONTACT</NavItems>
       </NavItemContainer>
     </NavContent>

@@ -18,18 +18,21 @@ const Title = styled.p`
   width: 20em;
   text-align: center;
   border-radius: 5em;
+  line-height: 1.75em;
 `
 
 const Image = styled.img`
+  margin-top: 2em;
   width: 30vw;
+  border-radius: 20px;
 `;
 
-const Portfolio = () => (
-  <Container>
+const Portfolio = ({innerRef}) => (
+  <Container ref={innerRef}>
 
       <Title>FEATURED PROJECTS</Title>
 
-      <Image src="../imgs/placeholder-portrait.png" />
+      <Image src="../imgs/Bape Game.png" />
   </Container>
 );
 
