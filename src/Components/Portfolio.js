@@ -11,6 +11,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
+  margin-top: 5em;
   font-size: 50px;
   background-color: #4442ad;
   color: white;
@@ -22,7 +23,7 @@ const Title = styled.p`
 `
 
 const Image = styled.img`
-  margin-top: 2em;
+  margin: 0 0 10em;
   width: 30vw;
   border-radius: 20px;
 `;

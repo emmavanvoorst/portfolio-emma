@@ -8,6 +8,7 @@ const NavContainer = styled.div`
   background-color: #4442ad;
   height: 15vh;
   width: 100%;
+  z-index: 0;
   border: 2px solid #31d8ef;
   color: white;
   font-size: 1.2rem;
