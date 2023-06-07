@@ -13,20 +13,13 @@ function App() {
   const portfolio = useRef(null);
   const contact = useRef(null);
 
-  const scrollToSection = (elementRef) =>{
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: 'smooth'
-    })
-  }
-
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Header />
-      <Hero />
-      <Portfolio />
-      <Contact />
+      <Header home={home} portF={portfolio} contact={contact}/>
+      <Hero ref={home}/>
+      <Portfolio ref={portfolio}/>
+      <Contact ref={contact}/>
       {/* <Routes>
         <Route path="/" element={<h1>hello</h1>} />
         <Route path="/hero" element={<Hero/>} />
