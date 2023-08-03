@@ -12,9 +12,7 @@ const Container = styled.div`
   padding-top: 3em;
 `;
 
-const Logo = styled.p`
-  font-size: 50px;
-`;
+
 
 const FormContainer = styled.div`
   text-align: center;
@@ -46,16 +44,11 @@ const Link = styled.a`
   text-decoration: none;
   color: white;
   font-size: 40px;
+  &:hover{
+    color: #31d8ef;
+  }
 `
-const Footer = styled.div`
-  background-color: #4442ad;
-  height: 15vh;
-  width: 100%;
-  border: 2px solid #31d8ef;
-  color: white;
-  text-align: left;
-  padding-left: 5em;
-`
+
 
 const Contact = ({ innerRef }) => (
   <Container ref={innerRef}>
@@ -66,11 +59,8 @@ const Contact = ({ innerRef }) => (
       <Title>CONTACT ME</Title>
       <Subtitle>email</Subtitle>
       <Link href="mailto:emmavanvorst@gmail.com">emmavanvorst@gmail.com</Link>
-      <Link href = "https://www.linkedin.com/in/emmavv" ><Subtitle>LinkedIn</Subtitle></Link>
+      <Link href = "https://www.linkedin.com/in/emmavv" ><Subtitle>Connect with me on LinkedIn</Subtitle></Link>
     </FormContainer>
-    <Footer>
-      <Logo>EVV</Logo>
-      </Footer>
   </Container>
 );
 

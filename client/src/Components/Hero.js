@@ -4,12 +4,12 @@ import { scrollToSection } from './Helpers'
 const ContentContainer = styled.div`
   background: white;
   width: 700px;
-  padding: 16px;
+  padding: 10px 16px;
   margin-top: 17vh;
 `;
 
 const HeroContainer = styled.div`
-  height: 120vh;
+  height: 50em;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -24,25 +24,6 @@ const Text = styled.p`
   text-align: justify;
 `;
 
-const FlexBox = styled.div`
-    display: flex;
-    justify-content: end;
-`
-
-const Button = styled.button`
-  all: unset;
-  cursor: pointer;
-  background-color: #4442ad;
-  color: white;
-  font-size: 20px;
-  height: 3em;
-  width: 15em;
-  margin-right: 1em;
-  text-align: center;
-  border-radius: 1em;
-  padding: 8px 16px;
-`;
-
 
 const Hero = (props) => (
   <HeroContainer ref={props.innerRef}>
@@ -50,12 +31,9 @@ const Hero = (props) => (
       <div>
         <Text>
           Hi, I’m Emma.
-          <br />A UI/UX designer and front end web developer based in Montreal,
+          <br />A UI/UX designer and full stack web developer based in Montreal,
           Canada.
         </Text>
-        <FlexBox>
-            <Button onClick={()=> scrollToSection(props.portF)}>SEE MY PORTFOLIO</Button>
-        </FlexBox>
         
       </div>
     </ContentContainer>
