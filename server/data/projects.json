@@ -1,0 +1,23 @@
+[
+    {
+        "img_url": "https://live.staticflickr.com/65535/53091638592_f7b720412d_o.png",
+        "name": "e-commerce",
+        "github_url": "https://github.com/emmavanvoorst/project-GROUP-e-commerce",
+        "website_url": "?",
+        "type":"webdev"
+    },
+    {
+        "img_url": "https://live.staticflickr.com/65535/53092383479_1534b76a31_o.png",
+        "name": "calend-art",
+        "github_url": "https://github.com/emmavanvoorst/calendart",
+        "website_url": "https://calend-art.vercel.app/",
+        "type":"webdev"
+    },
+    {
+        "img_url": "https://live.staticflickr.com/65535/53091638587_255ae93d67_o.png",
+        "name": "deepsight",
+        "github_url": "https://www.behance.net/gallery/140006533/DeepSight-Web-Console",
+        "website_url": "https://calend-art.vercel.app/",
+        "type":"ux-ui"
+    }
+]

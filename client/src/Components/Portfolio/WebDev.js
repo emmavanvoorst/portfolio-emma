@@ -105,7 +105,7 @@ const WebDev = () => {
           onMouseEnter={() => setisHovered(true)}
           onMouseLeave={() => setisHovered(false)}
         >
-          {isHovered && (
+          {isHovered && showCalendArt && (
             <ButtonContainer>
               <StyledLink to="https://github.com/emmavanvoorst/calendart">
                 
@@ -128,6 +128,30 @@ const WebDev = () => {
               </StyledLink>
             </ButtonContainer>
           )}
+   {isHovered && showECommerce && (
+            <ButtonContainer>
+              <StyledLink to="https://github.com/emmavanvoorst/project-GROUP-e-commerce">
+                
+                <GitHubButton>
+                  {" "}
+                  <ButtonFlex>
+                    <Text>GitHub</Text>
+                    <BiRightArrow size={23} />
+                  </ButtonFlex>
+                </GitHubButton>
+              </StyledLink>
+
+              <StyledLink to="https://calend-art.vercel.app/">
+                <ProjectButton>
+                  <ButtonFlex>
+                    <Text>View Project</Text>
+                    <BiRightArrow size={23} />
+                  </ButtonFlex>
+                </ProjectButton>
+              </StyledLink>
+            </ButtonContainer>
+          )}
+
           {showCalendArt && (
             <Image src="../imgs/calend-art.PNG" isHovered={isHovered} />
           )}

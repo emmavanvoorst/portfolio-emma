@@ -84,6 +84,8 @@ const ProjectButton = styled.button`
   }
 `
 
+
+const Example = ({ data }) => <img src={`data:image/jpeg;base64,${data}`} />
 const UiUx = () => {
   const [showDeepSight, setShowDeepSight] = useState(true);
   const [showMapleBank, setShowMapleBank] = useState(false);
@@ -117,20 +119,34 @@ return (
           onMouseEnter={() => setisHovered(true)}
           onMouseLeave={() => setisHovered(false)}
         >
-          {isHovered && (
+          {isHovered && showDeepSight && (
             <ButtonContainer>
-              {/* <StyledLink to="https://github.com/emmavanvoorst/calendart"> */}
-                
-                {/* <GitHubButton>
-                  {" "}
-                  <ButtonFlex>
-                    <Text>GitHub</Text>
-                    <BiRightArrow size={23} />
-                  </ButtonFlex>
-                </GitHubButton>
-              </StyledLink> */}
 
               <StyledLink to="https://www.behance.net/gallery/140006533/DeepSight-Web-Console">
+                <ProjectButton>
+                  <ButtonFlex>
+                    <Text>View Project</Text>
+                    <BiRightArrow size={23} />
+                  </ButtonFlex>
+                </ProjectButton>
+              </StyledLink>
+            </ButtonContainer>
+          )}
+          {isHovered && showMapleBank && (
+            <ButtonContainer>
+               <StyledLink to="https://www.behance.net/gallery/176860569/Maple-Bank-Investment-App">
+                <ProjectButton>
+                  <ButtonFlex>
+                    <Text>View Project</Text>
+                    <BiRightArrow size={23} />
+                  </ButtonFlex>
+                </ProjectButton>
+              </StyledLink>
+            </ButtonContainer>
+          )}
+            {isHovered && showPetVC && (
+            <ButtonContainer>
+               <StyledLink to="https://www.behance.net/gallery/177162925/City-of-Vancouver-Lost-Pet-Feature">
                 <ProjectButton>
                   <ButtonFlex>
                     <Text>View Project</Text>
