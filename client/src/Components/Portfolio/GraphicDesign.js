@@ -136,7 +136,7 @@ const GraphicDesign = () => {
             <Image src="../imgs/GoyaMockup.PNG" isHovered={isHovered} />
           )}
           {showNike && (
-            <Image src="../imgs/NikeMockup.PNG" isHovered={isHovered} />
+            <Image src="../imgs/NikeMockup.png" isHovered={isHovered} />
           )}
         </ImageWrapper>
         <ProjectContainer>

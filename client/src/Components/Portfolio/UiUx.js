@@ -157,7 +157,7 @@ return (
             </ButtonContainer>
           )}
       {showDeepSight && <Image src="../imgs/deepsight.PNG" isHovered={isHovered}/>}
-      {showMapleBank && <Image src="../imgs/MapleBank.png" isHovered={isHovered}/>}
+      {showMapleBank && <Image src="../imgs/MapleBank.PNG" isHovered={isHovered}/>}
       {showPetVC && <Image src="../imgs/petvc.PNG" isHovered={isHovered}/>}
       </ImageWrapper>
     <ProjectContainer>
