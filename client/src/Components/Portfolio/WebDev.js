@@ -130,7 +130,7 @@ const WebDev = () => {
           )}
    {isHovered && showECommerce && (
             <ButtonContainer>
-              <StyledLink to="https://github.com/emmavanvoorst/project-GROUP-e-commerce">
+              <StyledLink to="https://github.com/emmavanvoorst/GadgetGo/tree/main">
                 
                 <GitHubButton>
                   {" "}
@@ -141,7 +141,7 @@ const WebDev = () => {
                 </GitHubButton>
               </StyledLink>
 
-              <StyledLink to="https://calend-art.vercel.app/">
+              <StyledLink to="https://gadget-go.vercel.app/">
                 <ProjectButton>
                   <ButtonFlex>
                     <Text>View Project</Text>
