@@ -42,10 +42,20 @@ const Button = styled.button`
   &:hover {
     color: blue;
   }
+  @media screen and (max-width: 500px){
+    font-size: 1rem;
+  }
 `;
 const Text = styled.div`
   margin-right: 0.5em;
 `;
+const Proj = styled.div`
+color: grey;
+@media screen and (max-width: 500px){
+  font-size: 0.8rem;
+  margin-bottom: 0.5em;
+}
+`
 const ButtonContainer = styled.div`
   z-index: 1;
   display: flex;
@@ -58,6 +68,9 @@ const ButtonContainer = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 2rem;
+  @media screen and (max-width: 500px){
+    font-size: 1rem;
+  }
 `;
 const GitHubButton = styled.button`
   all: unset;
@@ -140,7 +153,7 @@ const GraphicDesign = () => {
           )}
         </ImageWrapper>
         <ProjectContainer>
-          <div>Projects</div>
+          <Proj>Projects</Proj>
           <Button active={showGoya} onClick={handleCalendArtClick}>
             Goya Packaging Redesign
           </Button>

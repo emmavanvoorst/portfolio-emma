@@ -25,6 +25,10 @@ const Image =styled.img`
   border-radius: 50%;
   height: 15em;
   width: 15em;
+  @media screen and (max-width: 500px){
+    height: 10em;
+  width: auto;
+  }
 `
 
 const Title = styled.p`
@@ -34,6 +38,9 @@ const Title = styled.p`
   height: 2em;
   color: #4442ad;
   line-height: 2em;
+  @media screen and (max-width: 500px){
+    font-size: 1.5em;
+  }
 `;
 const Subtitle = styled.p`
 `;
@@ -46,6 +53,9 @@ const Link = styled.a`
   font-size: 40px;
   &:hover{
     color: #31d8ef;
+  }
+  @media screen and (max-width: 500px){
+    font-size: 1.5em;
   }
 `
 

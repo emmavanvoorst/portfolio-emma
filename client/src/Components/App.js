@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 import "../App.css";
-import Header from "./Header";
+import NavBar from "./NavBar";
 import Hero from "./Hero";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
@@ -20,7 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Header hero={hero} skills={skills} portF={portfolio} contact={contact}/>
+      <NavBar hero={hero} skills={skills} portF={portfolio} contact={contact}/>
       <Hero innerRef={hero} portF={portfolio}/>
       <Skills innerRef={skills}/>
       <Portfolio innerRef={portfolio}/>

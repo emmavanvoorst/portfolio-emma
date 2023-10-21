@@ -37,6 +37,9 @@ const ButtonContainer = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 2rem;
+  @media screen and (max-width: 500px){
+    font-size: 1rem;
+  }
 `;
 const ButtonFlex = styled.div`
   display: flex;
@@ -52,6 +55,9 @@ cursor: pointer;
 &:hover {
     color: blue;
   }
+  @media screen and (max-width: 500px){
+    font-size: 1rem;
+  }
 `;
 const StyledLink = styled(Link)`
   all: unset;
@@ -59,6 +65,13 @@ const StyledLink = styled(Link)`
 const Text = styled.div`
   margin-right: 0.5em;
 `;
+const Proj = styled.div`
+color: grey;
+@media screen and (max-width: 500px){
+  font-size: 0.8rem;
+  margin-bottom: 0.5em;
+}
+`
 const GitHubButton = styled.button`
   all: unset;
   cursor: pointer;
@@ -161,7 +174,7 @@ return (
       {showPetVC && <Image src="../imgs/petvc.PNG" isHovered={isHovered}/>}
       </ImageWrapper>
     <ProjectContainer>
-      <div>Projects</div>
+      <Proj>Projects</Proj>
     <Button active={showDeepSight} onClick={handleDeepSightClick}>DeepSight Web Console</Button>
     <Button active={showMapleBank} onClick={handleMapleBankClick}>Maple Bank</Button>
     <Button active={showPetVC} onClick={handlePetVCClick}>Vancouver Lost Pet Feature</Button>

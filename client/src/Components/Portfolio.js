@@ -44,6 +44,9 @@ const Button = styled.button`
     visibility: ${(props) => (props.active === props.componentName ? "visible" : "hidden")};
     transition: opacity 300ms, visibility 300ms;
   }
+  @media screen and (max-width: 500px){
+    font-size: 1rem;
+  }
 `;
 
 const Portfolio = ({ innerRef }) => {
