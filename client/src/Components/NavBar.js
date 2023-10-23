@@ -19,7 +19,6 @@ const NavContainer = styled.div`
   align-items: center;
   justify-content: center;
 `;
-
 const NavTitle = styled.p`
   font-size: 1.6rem;
   display: inline;
@@ -39,7 +38,6 @@ margin-left: 0.5em;
     display: none;
   }
 `
-
 
 const NavItems = styled.p`
   display: inline;

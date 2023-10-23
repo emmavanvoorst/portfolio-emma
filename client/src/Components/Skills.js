@@ -54,16 +54,25 @@ const SmallScreenLogos = styled.div`
 display: flex;
   align-items: center;
   margin: 3em 0 3em 0;
+  @media screen and (min-width: 500px){
+    display:none;
+  }
 `
 const SmallNextRow = styled.div`
  display: flex;
   align-items: center;
   margin-bottom: 3em;
+  @media screen and (min-width: 500px){
+    display:none;
+  }
 `
 const SmallRowThree = styled.div`
 display: flex;
   align-items: center;
   margin-bottom: 3em;
+  @media screen and (min-width: 500px){
+    display:none;
+  }
 `
 const Skills = ({ innerRef }) => (
   <Container ref={innerRef}>
