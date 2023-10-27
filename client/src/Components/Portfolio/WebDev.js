@@ -204,7 +204,7 @@ const WebDev = () => {
               </StyledLink> */}
             </ButtonContainer>
           )}
-          {isHovered && showAtelierEma && (
+          {isHovered && showPM && (
             <ButtonContainer>
               <StyledLink to="https://github.com/emmavanvoorst/pm_redesign">
                 <GitHubButton>
