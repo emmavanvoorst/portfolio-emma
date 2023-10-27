@@ -42,7 +42,7 @@ const Button = styled.button`
   &:hover {
     color: blue;
   }
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     font-size: 1rem;
   }
 `;
@@ -50,12 +50,12 @@ const Text = styled.div`
   margin-right: 0.5em;
 `;
 const Proj = styled.div`
-color: grey;
-@media screen and (max-width: 500px){
-  font-size: 0.8rem;
-  margin-bottom: 0.5em;
-}
-`
+  color: grey;
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+  }
+`;
 const ButtonContainer = styled.div`
   z-index: 1;
   display: flex;
@@ -68,7 +68,7 @@ const ButtonContainer = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 2rem;
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px) {
     font-size: 1rem;
   }
 `;
@@ -100,22 +100,33 @@ const WebDev = () => {
   const [showCalendArt, setShowCalendArt] = useState(true);
   const [showECommerce, setShowECommerce] = useState(false);
   const [showAtelierEma, setShowAtelierEma] = useState(false);
+  const [showPM, setShowPM] = useState(false);
   const [isHovered, setisHovered] = useState(false);
 
   const handleCalendArtClick = () => {
     setShowCalendArt(true);
     setShowECommerce(false);
     setShowAtelierEma(false);
+    setShowPM(false);
   };
 
   const handleECommerceClick = () => {
     setShowECommerce(true);
     setShowCalendArt(false);
     setShowAtelierEma(false);
+    setShowPM(false);
   };
 
   const handleAtelierEmaClick = () => {
     setShowAtelierEma(true);
+    setShowECommerce(false);
+    setShowCalendArt(false);
+    setShowPM(false);
+  };
+
+  const handlePMClick = () => {
+    setShowPM(true);
+    setShowAtelierEma(false);
     setShowECommerce(false);
     setShowCalendArt(false);
   };
@@ -130,7 +141,6 @@ const WebDev = () => {
           {isHovered && showCalendArt && (
             <ButtonContainer>
               <StyledLink to="https://github.com/emmavanvoorst/calendart">
-                
                 <GitHubButton>
                   {" "}
                   <ButtonFlex>
@@ -150,10 +160,9 @@ const WebDev = () => {
               </StyledLink>
             </ButtonContainer>
           )}
-   {isHovered && showECommerce && (
+          {isHovered && showECommerce && (
             <ButtonContainer>
               <StyledLink to="https://github.com/emmavanvoorst/GadgetGo/tree/main">
-                
                 <GitHubButton>
                   {" "}
                   <ButtonFlex>
@@ -173,10 +182,9 @@ const WebDev = () => {
               </StyledLink>
             </ButtonContainer>
           )}
-   {isHovered && showAtelierEma && (
+          {isHovered && showAtelierEma && (
             <ButtonContainer>
               <StyledLink to="https://github.com/emmavanvoorst/atelier_ema">
-                
                 <GitHubButton>
                   {" "}
                   <ButtonFlex>
@@ -196,6 +204,19 @@ const WebDev = () => {
               </StyledLink> */}
             </ButtonContainer>
           )}
+          {isHovered && showAtelierEma && (
+            <ButtonContainer>
+              <StyledLink to="https://github.com/emmavanvoorst/pm_redesign">
+                <GitHubButton>
+                  {" "}
+                  <ButtonFlex>
+                    <Text>GitHub</Text>
+                    <BiRightArrow size={23} />
+                  </ButtonFlex>
+                </GitHubButton>
+              </StyledLink>
+            </ButtonContainer>
+          )}
           {showCalendArt && (
             <Image src="../imgs/calend-art.PNG" isHovered={isHovered} />
           )}
@@ -204,6 +225,9 @@ const WebDev = () => {
           )}
           {showAtelierEma && (
             <Image src="../imgs/atelierema.PNG" isHovered={isHovered} />
+          )}
+          {showPM && (
+            <Image src="../imgs/pm_redesign.PNG" isHovered={isHovered} />
           )}
         </ImageWrapper>
         <ProjectContainer>
@@ -216,6 +240,9 @@ const WebDev = () => {
           </Button>
           <Button active={showAtelierEma} onClick={handleAtelierEmaClick}>
             Atelier Ema
+          </Button>
+          <Button active={showPM} onClick={handlePMClick}>
+            Poubelle Magnifique Redesign
           </Button>
         </ProjectContainer>
       </Flex>
